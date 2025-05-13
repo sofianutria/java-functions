@@ -1,8 +1,17 @@
 public class BuiltInFunctions {
     public static void main(String[] args) {
 
-        //Ejecuta aquí todos los métodos creados e imprime en la terminal. 
-
+        //Ejecuta aquí todos los métodos creados e imprime en la terminal.
+        printMessage ("Hola Mundo");
+        String message="Hola Mundo";
+        System.out.println("Longitud: " + getLength(message));
+        System.out.println("Minúsculas: " + convertToLowercase(message));
+        System.out.println("¿El prefijo es 'Pre'? " + findPrefix(message, "Pre"));
+        System.out.println("Reemplazo de 'e' por 'a': " + replaceCharacters(message, 'o', 'a'));
+        System.out.println("Raíz cuadrada de 16: " + getsSquareRoot(16));
+        System.out.println("2 elevado a la 4: " + getPower(2, 4));
+        System.out.println("Número aleatorio: " + getRandomNumber());
+        System.out.println("Mayor entre 8 y 15: " + maxNumber(8, 15));
     }
 
     /**
@@ -15,7 +24,9 @@ public class BuiltInFunctions {
          */
 
         // Escribe tu código aquí
-        
+        public static void printMessage(String message) {
+            System.out.println(message);
+        }
 
         /**
          * Function name: getLength
@@ -28,7 +39,9 @@ public class BuiltInFunctions {
          */
 
         // Escribe tu código aquí
-
+        public static int getLength(String message) {
+            return message.length();
+        }
 
         /**
          * Function name: convertToLowercase
@@ -41,7 +54,9 @@ public class BuiltInFunctions {
          */
 
         // Escribe tu código aquí
-
+        public static String convertToLowercase(String message) {
+            return message.toLowerCase();
+        }
 
         /**
          * Function name: findPrefix
@@ -55,7 +70,9 @@ public class BuiltInFunctions {
          */
 
         // Escribe tu código aquí
-
+        public static boolean findPrefix(String message, String prefix) {
+            return message.startsWith(prefix);
+        }
 
         /**
          * Function name: replaceCharacters
@@ -70,7 +87,9 @@ public class BuiltInFunctions {
          */
 
         // Escribe tu código aquí
-
+        public static String replaceCharacters(String message, char oldChar, char newChar) {
+            return message.replace(oldChar, newChar);
+        }
         
         /**
          * Function name: getsSquareRoot
@@ -83,7 +102,9 @@ public class BuiltInFunctions {
          */
 
         // Escribe tu código aquí
-
+        public static double getsSquareRoot(double number) {
+            return Math.sqrt(number);
+        }
 
         /**
          * Function name: getPower
@@ -97,7 +118,9 @@ public class BuiltInFunctions {
          */
 
         // Escribe tu código aquí
-
+        public static double getPower(double base, double exponent) {
+            return Math.pow(base, exponent);
+        }
 
         /**
          * Function name: getRandomNumber
@@ -109,7 +132,9 @@ public class BuiltInFunctions {
          */
 
         // Escribe tu código aquí
-
+        public static double getRandomNumber() {
+            return Math.random();
+        }
 
         /**
          * Function name: maxNumber
@@ -123,4 +148,7 @@ public class BuiltInFunctions {
          */
 
         // Escribe tu código aquí
+        public static int maxNumber(int number1, int number2) {
+            return Math.max(number1, number2);
+        }
     }
